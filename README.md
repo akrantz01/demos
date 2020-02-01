@@ -4,4 +4,4 @@ Each library will have its own folder and dependencies.
 
 ## Projects
 Below is the list of demo projects:
-
+- [PeerJS](/peerjs)

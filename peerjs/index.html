@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PeerJS Example - Chat</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.0.4/peerjs.min.js" integrity="sha256-PG8Gvub/rNEMP0CTjAaidkbuxO5r3NaJhFqwLoJ2cDU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+<body>
+    <div id="board"></div>
+
+    <br/>
+    <br/>
+
+    <table>
+        <tr>
+            <th id="connection-status" style="color: red">Not Connected</th>
+            <th>Chat Log</th>
+        </tr>
+        <tr>
+            <td id="connection" class="left-pad">
+                <h1>Chat</h1>
+                <br/><br/>
+
+                <p>Your ID is <i id="user-peer-id">loading...</i></p>
+
+                <label for="connection-id">Peer ID:</label><br/>
+                <input type="text" id="connection-id" placeholder="Your opponent's ID"/><br/>
+
+                <br/>
+
+                <button type="button" id="connection-connect">Connect</button>
+            </td>
+            <td id="chat">
+                <div id="chat-log"></div>
+
+                <br/>
+
+                <input type="text" id="chat-message" placeholder="Say something!" disabled/>
+                <button type="button" id="chat-send" disabled>Send</button>
+            </td>
+        </tr>
+    </table>
+
+    <script src="handlers.js"></script>
+    <script src="connection.js"></script>
+</body>
+</html>
